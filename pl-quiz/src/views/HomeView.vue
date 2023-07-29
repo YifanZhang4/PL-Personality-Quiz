@@ -8,5 +8,5 @@ export default {
 </script>
 
 <template>
-  <quiz/>
+  <quiz />
 </template>
