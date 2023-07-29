@@ -766,17 +766,15 @@ export default {
       question16: false,
       question17: false,
       question18: false,
-      personality: [{
-            Awkward: 0,
-            Bashful: 0,
-            Childish: 0,
-            Feeble: 0,
-            Heroic: 0,
-            Mischevious: 0,
-            Relaxed: 0,
-            Sassy: 0,
-            Quirky: 0,
-      }],
+      Awkward: 0,
+      Bashful: 0,
+      Childish: 0,
+      Feeble: 0,
+      Heroic: 0,
+      Mischevious: 0,
+      Relaxed: 0,
+      Sassy: 0,
+      Quirky: 0,
 
       ending: false,
     }
@@ -859,27 +857,27 @@ export default {
       this.ending = true
       console.log(
         Math.max(
-            this.personality.Awkward,
-            this.personality.Bashful,
-            this.personality.Childish,
-            this.personality.Feeble,
-            this.personality.Heroic,
-            this.personality.Mischevious,
-            this.personality.Relaxed,
-            this.personality.Sassy,
-            this.personality.Quirky)
+            this.Awkward,
+            this.Bashful,
+            this.Childish,
+            this.Feeble,
+            this.Heroic,
+            this.Mischevious,
+            this.Relaxed,
+            this.Sassy,
+            this.Quirky)
             )
         const result =
         Math.max(
-            this.personality.Awkward,
-            this.personality.Bashful,
-            this.personality.Childish,
-            this.personality.Feeble,
-            this.personality.Heroic,
-            this.personality.Mischevious,
-            this.personality.Relaxed,
-            this.personality.Sassy,
-            this.personality.Quirky)
+            this.Awkward,
+            this.Bashful,
+            this.Childish,
+            this.Feeble,
+            this.Heroic,
+            this.Mischevious,
+            this.Relaxed,
+            this.Sassy,
+            this.Quirky)
         
     },
     retry: function () {
@@ -887,31 +885,31 @@ export default {
       this.starting = true
     },
     awkward: function () {
-      this.personality.Awkward = this.personality.Awkward + 1
+      this.Awkward = this.Awkward + 1
     },
     bashful: function () {
-      this.personality.Bashful = this.personality.Bashful + 1
+      this.Bashful = this.Bashful + 1
     },
     childish: function () {
-      this.personality.Childish = this.personality.Childish + 1
+      this.Childish = this.Childish + 1
     },
     feeble: function () {
-      this.personality.Feeble = this.personality.Feeble + 1
+      this.Feeble = this.Feeble + 1
     },
     heroic: function () {
-      this.personality.Heroic = this.personality.Heroic + 1
+      this.Heroic = this.Heroic + 1
     },
     mischevious: function () {
-      this.personality.Mischevious = this.personality.Mischevious + 1
+      this.Mischevious = this.Mischevious + 1
     },
     relaxed: function () {
-      this.personality.Relaxed = this.personality.Relaxed + 1
+      this.Relaxed = this.Relaxed + 1
     },
     sassy: function () {
-      this.personality.Sassy = this.personality.Sassy + 1
+      this.Sassy = this.Sassy + 1
     },
     quirky: function () {
-      this.personality.Quirky = this.personality.Quirky + 1
+      this.Quirky = this.Quirky + 1
     }
   }
 }
