@@ -357,8 +357,8 @@
     </button>
     <button
       class="answer"
-      @click="
-        next8();
+      @click=";
+        next8()
         relaxed()
       "
     >
@@ -743,10 +743,13 @@
 </template>
 
 <script>
+// import stats from './stats.js'
 export default {
   name: 'quiz',
   data() {
     return {
+      // stats: Array,
+      // results: Array,
       starting: true,
       question1: false,
       question2: false,
@@ -766,17 +769,18 @@ export default {
       question16: false,
       question17: false,
       question18: false,
-      Awkward: 0,
-      Bashful: 0,
-      Childish: 0,
-      Feeble: 0,
-      Heroic: 0,
-      Mischevious: 0,
-      Relaxed: 0,
-      Sassy: 0,
-      Quirky: 0,
-
-      ending: false,
+      stats: [
+  { Awkward: 0 },
+  { Bashful: 0 },
+  { Childish: 0 },
+  { Feeble: 0 },
+  { Heroic: 0 },
+  { Mischevious: 0 },
+  { Relaxed: 0 },
+  { Sassy: 0 },
+  { Quirky: 0 }
+],
+      ending: false
     }
   },
   methods: {
@@ -855,61 +859,40 @@ export default {
     next17: function () {
       this.question18 = false
       this.ending = true
-      console.log(
-        Math.max(
-            this.Awkward,
-            this.Bashful,
-            this.Childish,
-            this.Feeble,
-            this.Heroic,
-            this.Mischevious,
-            this.Relaxed,
-            this.Sassy,
-            this.Quirky)
-            )
-        const result =
-        Math.max(
-            this.Awkward,
-            this.Bashful,
-            this.Childish,
-            this.Feeble,
-            this.Heroic,
-            this.Mischevious,
-            this.Relaxed,
-            this.Sassy,
-            this.Quirky)
-        
+      const results = Math.max(this.stats)
+      console.log(this.stats)
     },
     retry: function () {
       this.ending = false
       this.starting = true
     },
     awkward: function () {
-      this.Awkward = this.Awkward + 1
+      console.log(this.stats.Awkward)
+      this.stats.Awkward = this.stats.Awkward + 1
     },
     bashful: function () {
-      this.Bashful = this.Bashful + 1
+      this.stats.Bashful = this.stats.Bashful + 1
     },
     childish: function () {
-      this.Childish = this.Childish + 1
+      this.stats.Childish = this.stats.Childish + 1
     },
     feeble: function () {
-      this.Feeble = this.Feeble + 1
+      this.stats.Feeble = this.stats.Feeble + 1
     },
     heroic: function () {
-      this.Heroic = this.Heroic + 1
+      this.stats.Heroic = this.stats.Heroic + 1
     },
     mischevious: function () {
-      this.Mischevious = this.Mischevious + 1
+      this.stats.Mischevious = this.stats.Mischevious + 1
     },
     relaxed: function () {
-      this.Relaxed = this.Relaxed + 1
+      this.stats.Relaxed = this.stats.Relaxed + 1
     },
     sassy: function () {
-      this.Sassy = this.Sassy + 1
+      this.stats.Sassy = this.stats.Sassy + 1
     },
     quirky: function () {
-      this.Quirky = this.Quirky + 1
+      this.stats.Quirky = this.stats.Quirky + 1
     }
   }
 }
